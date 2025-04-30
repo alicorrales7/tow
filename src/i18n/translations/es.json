@@ -1,0 +1,69 @@
+{
+  "reports": {
+    "title": "Reportes",
+    "description": "Ver y gestionar sus reportes de incidentes de grúa",
+    "newReport": "Nuevo Reporte",
+    "filters": {
+      "all": "Todos los Reportes",
+      "pending": "Pendientes",
+      "resolved": "Resueltos"
+    },
+    "table": {
+      "date": "Fecha",
+      "type": "Tipo",
+      "location": "Ubicación",
+      "status": "Estado",
+      "description": "Descripción",
+      "actions": "Acciones",
+      "view": "Ver Detalles"
+    },
+    "types": {
+      "towing": "Remolque Indebido",
+      "fee": "Disputa de Tarifa",
+      "damage": "Daño al Vehículo"
+    },
+    "statuses": {
+      "resolved": "Resuelto",
+      "pending": "Pendiente",
+      "investigating": "En Investigación"
+    },
+    "stats": {
+      "totalReports": "Total de Reportes",
+      "avgResolutionTime": "Tiempo Promedio de Resolución",
+      "resolutionRate": "Tasa de Resolución"
+    }
+  },
+  "transportDepartment": {
+    "title": "Reclamo ante el Departamento de Transporte",
+    "intro": "Si una compañía de grúas operó fuera de su jurisdicción, remolcó de manera indebida en una autopista o violó regulaciones estatales de transporte, puedes presentar una queja ante el Departamento de Transporte de Florida (FDOT).",
+    "officialLink": {
+      "title": "Enlace oficial para reclamos",
+      "text": "Presentar un reclamo ante el FDOT →"
+    },
+    "steps": {
+      "title": "Pasos para presentar tu reclamo",
+      "list": [
+        "Accede al formulario de quejas del FDOT usando el enlace oficial.",
+        "Selecciona la categoría relacionada a remolques o transporte comercial.",
+        "Llena tus datos personales completos.",
+        "Describe claramente el incidente: lugar, fecha, empresa de grúas involucrada.",
+        "Adjunta cualquier evidencia relevante (fotos, facturas, videos).",
+        "Envía el formulario a través de su plataforma en línea."
+      ]
+    },
+    "whatNext": {
+      "title": "¿Qué sucede después de enviar tu reclamo?",
+      "description": "Tras enviar tu queja, el Departamento de Transporte revisará el caso y determinará si la compañía de grúas violó alguna norma. No siempre recibirás una respuesta inmediata, pero es importante enviar toda la información posible para fortalecer la investigación."
+    },
+    "warning": {
+      "title": "Importante:",
+      "description": "Este reclamo es exclusivamente para casos donde haya violaciones relacionadas a leyes de transporte público o comercial. Si tu caso es estrictamente un abuso comercial (por cobros indebidos), puede ser mejor hacerlo también ante Consumer Services."
+    },
+    "aiHelp": {
+      "title": "¿Necesitas ayuda llenando el formulario?",
+      "description": "Muy pronto podrás utilizar nuestro asistente inteligente para generar automáticamente tus documentos de reclamo.",
+      "button": "Solicitar ayuda para llenar el formulario →"
+    },
+    "footer": "*La información aquí presentada se basa en procesos reales de reclamo ante el Departamento de Transporte de Florida."
+  }
+} 

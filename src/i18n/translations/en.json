@@ -1,0 +1,69 @@
+{
+  "reports": {
+    "title": "Reports",
+    "description": "View and manage your towing incident reports",
+    "newReport": "New Report",
+    "filters": {
+      "all": "All Reports",
+      "pending": "Pending",
+      "resolved": "Resolved"
+    },
+    "table": {
+      "date": "Date",
+      "type": "Type",
+      "location": "Location",
+      "status": "Status",
+      "description": "Description",
+      "actions": "Actions",
+      "view": "View Details"
+    },
+    "types": {
+      "towing": "Improper Towing",
+      "fee": "Fee Dispute",
+      "damage": "Vehicle Damage"
+    },
+    "statuses": {
+      "resolved": "Resolved",
+      "pending": "Pending",
+      "investigating": "Investigating"
+    },
+    "stats": {
+      "totalReports": "Total Reports",
+      "avgResolutionTime": "Average Resolution Time",
+      "resolutionRate": "Resolution Rate"
+    }
+  },
+  "transportDepartment": {
+    "title": "Complaint to the Department of Transportation",
+    "intro": "If a towing company operated outside its jurisdiction, improperly towed on a highway, or violated state transportation regulations, you can file a complaint with the Florida Department of Transportation (FDOT).",
+    "officialLink": {
+      "title": "Official Link for Complaints",
+      "text": "File a complaint with FDOT →"
+    },
+    "steps": {
+      "title": "Steps to File Your Complaint",
+      "list": [
+        "Access the FDOT complaint form using the official link.",
+        "Select the category related to towing or commercial transport.",
+        "Fill in your complete personal information.",
+        "Clearly describe the incident: location, date, towing company involved.",
+        "Attach any relevant evidence (photos, invoices, videos).",
+        "Submit the form through their online platform."
+      ]
+    },
+    "whatNext": {
+      "title": "What happens after submitting your complaint?",
+      "description": "After submitting your complaint, the Department of Transportation will review the case and determine if the towing company violated any regulations. You may not always receive an immediate response, but it's important to send all possible information to strengthen the investigation."
+    },
+    "warning": {
+      "title": "Important:",
+      "description": "This complaint is exclusively for cases involving violations related to public or commercial transportation laws. If your case is strictly a commercial abuse (for improper charges), it may be better to also file with Consumer Services."
+    },
+    "aiHelp": {
+      "title": "Need help filling out the form?",
+      "description": "Soon you'll be able to use our intelligent assistant to automatically generate your claim documents.",
+      "button": "Request help filling out the form →"
+    },
+    "footer": "*The information presented here is based on actual complaint processes with the Florida Department of Transportation."
+  }
+} 

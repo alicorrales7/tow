@@ -1,102 +1,183 @@
+import { useLanguage } from "../../i18n/LanguageContext";
+
 export default function SmallClaims() {
+  const { t } = useLanguage();
+
   return (
-    <section class="flex justify-center px-4 py-12 bg-gray-100 min-h-screen">
-      <div class="animate-fade-in bg-white shadow-md rounded-2xl max-w-3xl w-full p-8 space-y-6">
-        <h1 class="text-2xl font-bold text-blue-700 mb-2">
-          Reclamo en Small Claims Court
+    <section class="flex justify-center px-6 py-12 bg-gray-100 min-h-screen">
+      <div class="bg-white shadow-md rounded-2xl max-w-3xl w-full p-8 space-y-8 animate-fade-in">
+        {/* Título principal */}
+        <h1 class="text-2xl font-bold text-blue-700">
+          {t("smallClaims.title")}
         </h1>
 
+        {/* Introducción */}
         <p class="text-gray-700 leading-relaxed">
-          Este procedimiento es ideal si quieres recuperar dinero por cobros
-          ilegales o por daños a tu vehículo causados por una compañía de grúas.
-          No necesitas abogado, y puedes presentar el caso tú mismo.
+          {t("smallClaims.description")}
         </p>
 
         {/* Enlace oficial */}
         <div>
-          <h2 class="text-xl font-semibold text-gray-800">Enlace oficial</h2>
+          <h2 class="text-xl font-semibold text-gray-800">
+            {t("smallClaims.officialLink.title")}
+          </h2>
           <a
             href="https://www.miamidade.gov/global/service.page?Mduid_service=ser1490894476018877"
             target="_blank"
             class="text-blue-600 hover:underline text-sm"
           >
-            Ver información oficial sobre Small Claims Court →
+            {t("smallClaims.officialLink.text")}
           </a>
         </div>
 
         {/* Qué necesitas preparar */}
         <div>
-          <h2 class="text-xl font-semibold text-gray-800 mt-6">
-            1. Qué debes preparar antes de ir
+          <h2 class="text-xl font-semibold text-gray-800">
+            {t("smallClaims.preparation.title")}
           </h2>
           <ul class="list-disc pl-6 text-gray-700 leading-relaxed space-y-1 text-sm mt-2">
-            <li>Una breve descripción de lo ocurrido (resumen del caso)</li>
-            <li>Nombre de la empresa de grúas</li>
-            <li>Fecha del incidente y lugar exacto</li>
-            <li>Monto que reclamas recuperar</li>
-            <li>Pruebas: fotos, recibos, capturas de chats o videos</li>
-            <li>Tu identificación (ID o licencia)</li>
+            <li>{t("smallClaims.preparation.items.caseDescription")}</li>
+            <li>{t("smallClaims.preparation.items.companyInfo")}</li>
+            <li>{t("smallClaims.preparation.items.dateLocation")}</li>
+            <li>{t("smallClaims.preparation.items.claimAmount")}</li>
+            <li>{t("smallClaims.preparation.items.evidence")}</li>
+            <li>{t("smallClaims.preparation.items.identification")}</li>
           </ul>
         </div>
 
-        {/* Formulario que te entregan o llenas */}
+        {/* Formularios */}
         <div>
-          <h2 class="text-xl font-semibold text-gray-800 mt-6">
-            2. Formularios que debes llenar
+          <h2 class="text-xl font-semibold text-gray-800">
+            {t("smallClaims.forms.title")}
           </h2>
           <p class="text-gray-700 text-sm leading-relaxed mt-2">
-            Puedes solicitar el formulario directamente en el tribunal o
-            llevarlo impreso si lo descargaste antes. En mi caso personal, me
-            entregaron un formulario para completar allí mismo, con espacio
-            para:
+            {t("smallClaims.forms.description")}
           </p>
           <ul class="list-disc pl-6 text-gray-700 leading-relaxed space-y-1 text-sm mt-2">
-            <li>Datos del demandante (tú)</li>
-            <li>Datos del demandado (empresa de grúas)</li>
-            <li>Resumen del reclamo</li>
-            <li>Monto reclamado</li>
-            <li>Firma y fecha</li>
+            <li>
+              <b>Plaintiff:</b> {t("smallClaims.forms.sections.plaintiff")}
+            </li>
+            <li>
+              <b>Defendant:</b> {t("smallClaims.forms.sections.defendant")}
+            </li>
+            <li>
+              <b>Amount Claimed:</b> {t("smallClaims.forms.sections.amount")}
+            </li>
+            <li>
+              <b>Statement of Claim:</b>{" "}
+              {t("smallClaims.forms.sections.statement")}
+            </li>
+            <li>
+              <b>Signature:</b> {t("smallClaims.forms.sections.signature")}
+            </li>
           </ul>
-          <p class="mt-2 text-sm text-gray-600">
-            Este formulario lo llené directamente en la oficina del tribunal,
-            con ayuda del personal.
-          </p>
         </div>
 
-        {/* Qué pasa al llegar */}
+        {/* Pasos del proceso */}
+        <div class="mt-10">
+          <h2 class="text-xl font-semibold text-gray-800 mb-6">
+            {t("smallClaims.process.title")}
+          </h2>
+
+          <ol class="relative border-l border-gray-300 space-y-6">
+            <li class="ml-6">
+              <div class="absolute w-3 h-3 bg-blue-600 rounded-full -left-1.5 top-2"></div>
+              <h3 class="font-semibold text-gray-900">
+                {t("smallClaims.process.steps.preparation.title")}
+              </h3>
+              <p class="text-sm text-gray-700 mt-1">
+                {t("smallClaims.process.steps.preparation.description")}
+              </p>
+            </li>
+
+            <li class="ml-6">
+              <div class="absolute w-3 h-3 bg-blue-600 rounded-full -left-1.5 top-2"></div>
+              <h3 class="font-semibold text-gray-900">
+                {t("smallClaims.process.steps.courthouse.title")}
+              </h3>
+              <p class="text-sm text-gray-700 mt-1">
+                {t("smallClaims.process.steps.courthouse.description")}
+              </p>
+            </li>
+
+            <li class="ml-6">
+              <div class="absolute w-3 h-3 bg-blue-600 rounded-full -left-1.5 top-2"></div>
+              <h3 class="font-semibold text-gray-900">
+                {t("smallClaims.process.steps.form.title")}
+              </h3>
+              <p class="text-sm text-gray-700 mt-1">
+                {t("smallClaims.process.steps.form.description")}
+              </p>
+            </li>
+
+            <li class="ml-6">
+              <div class="absolute w-3 h-3 bg-blue-600 rounded-full -left-1.5 top-2"></div>
+              <h3 class="font-semibold text-gray-900">
+                {t("smallClaims.process.steps.submit.title")}
+              </h3>
+              <p class="text-sm text-gray-700 mt-1">
+                {t("smallClaims.process.steps.submit.description")}
+              </p>
+            </li>
+
+            <li class="ml-6">
+              <div class="absolute w-3 h-3 bg-blue-600 rounded-full -left-1.5 top-2"></div>
+              <h3 class="font-semibold text-gray-900">
+                {t("smallClaims.process.steps.hearing.title")}
+              </h3>
+              <p class="text-sm text-gray-700 mt-1">
+                {t("smallClaims.process.steps.hearing.description")}
+              </p>
+            </li>
+          </ol>
+        </div>
+
+        {/* Costos */}
         <div>
-          <h2 class="text-xl font-semibold text-gray-800 mt-6">
-            3. ¿Qué pasa cuando llegas al tribunal?
+          <h2 class="text-xl font-semibold text-gray-800">
+            {t("smallClaims.costs.title")}
           </h2>
           <p class="text-gray-700 text-sm leading-relaxed mt-2">
-            Cuando llegas a la ventanilla de reclamos menores, el personal te
-            entrega el formulario si no lo llevas. Una vez que completas todo,
-            entregas tus pruebas y pagas la tarifa correspondiente.
-          </p>
-          <p class="text-gray-700 text-sm mt-2">
-            En mi caso, me asignaron directamente **una fecha para presentarme
-            en corte**, sin tener que esperar confirmación por correo. Me
-            entregaron un papel con la cita y un número de caso.
+            {t("smallClaims.costs.description")}
           </p>
         </div>
 
-        {/* Costos y tiempo */}
-        <div>
-          <h2 class="text-xl font-semibold text-gray-800 mt-6">
-            4. ¿Cuánto cuesta presentar el reclamo?
+        {/* Advertencia */}
+        <div class="mt-10 bg-yellow-100 border-l-4 border-yellow-500 p-4 rounded-md">
+          <div class="flex items-center">
+            <svg
+              class="h-6 w-6 text-yellow-500 mr-3"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M12 9v2m0 4h.01M12 5.5a7 7 0 100 14 7 7 0 000-14z"
+              />
+            </svg>
+            <div>
+              <h3 class="text-sm font-semibold text-yellow-800">
+                {t("smallClaims.warning.title")}
+              </h3>
+              <p class="text-sm text-yellow-700 mt-1">
+                {t("smallClaims.warning.description")}
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Botón de Asistente IA */}
+        <div class="mt-10 text-center">
+          <h2 class="text-xl font-semibold text-gray-800 mb-4">
+            {t("common.aiAssistant.title")}
           </h2>
-          <p class="text-gray-700 text-sm leading-relaxed mt-2">
-            La tarifa depende del monto que estés reclamando. En casos menores
-            de $500, el costo suele ser bajo. Puedes pagar en efectivo, tarjeta
-            o money order. No necesitas abogado.
+          <p class="text-gray-600 text-sm mb-6 max-w-md mx-auto">
+            {t("common.aiAssistant.description")}
           </p>
-        </div>
-
-        {/* Nota final */}
-        <div class="pt-4 border-t border-gray-200 text-sm text-gray-500">
-          *Esta experiencia está basada en un caso real ocurrido en el tribunal
-          de reclamos menores de Miami-Dade. El proceso puede variar ligeramente
-          dependiendo del condado.
+          <button class="btn-primary">{t("common.aiAssistant.button")}</button>
         </div>
       </div>
     </section>

@@ -1,71 +1,86 @@
-export default function DepartamentoTransporte() {
+import { useLanguage } from "../../i18n/LanguageContext";
+import { For, createMemo } from "solid-js";
+
+export default function TransportDepartment() {
+  const { t } = useLanguage();
+  const steps = createMemo(() => {
+    const list = t("transportDepartment.steps.list");
+    return Array.isArray(list) ? list : [];
+  });
+
   return (
-    <section class="flex justify-center px-4 py-12 bg-gray-100 min-h-screen">
-      <div class="animate-fade-in bg-white shadow-md rounded-2xl max-w-3xl w-full p-8 space-y-6">
-        <h1 class="text-2xl font-bold text-blue-700 mb-2">
-          Reportar una grúa al Departamento de Transporte del Condado
+    <section class="flex justify-center px-6 py-12 bg-gray-100 min-h-screen">
+      <div class="bg-white shadow-md rounded-2xl max-w-3xl w-full p-8 space-y-8 animate-fade-in">
+        {/* Título principal */}
+        <h1 class="text-2xl font-bold text-blue-700">
+          {t("transportDepartment.title")}
         </h1>
 
-        <p class="text-gray-700 leading-relaxed">
-          El Departamento de Transporte puede intervenir cuando una compañía de
-          grúas remueve vehículos sin autorización, fuera de zonas habilitadas o
-          violando normativas locales. Este tipo de reclamo puede ayudar a
-          sancionar administrativamente a la compañía.
+        {/* Introducción */}
+        <p class="text-gray-700 text-sm leading-relaxed">
+          {t("transportDepartment.intro")}
         </p>
 
-        <div>
-          <h2 class="text-xl font-semibold text-gray-800">Enlace oficial</h2>
+        {/* Enlace oficial */}
+        <div class="space-y-2">
+          <h2 class="text-xl font-semibold text-gray-800">
+            {t("transportDepartment.officialLink.title")}
+          </h2>
           <a
-            href="https://www.miamidade.gov/global/transportation/home.page"
+            href="https://fdotwp1.dot.state.fl.us/ComplaintForm/ComplaintForm.aspx"
             target="_blank"
             class="text-blue-600 hover:underline text-sm"
           >
-            Más información en el Departamento de Transporte →
+            {t("transportDepartment.officialLink.text")}
           </a>
         </div>
 
-        <div>
-          <h2 class="text-xl font-semibold text-gray-800 mt-6">
-            Pasos para hacer el reclamo
+        {/* Pasos a seguir */}
+        <div class="space-y-2">
+          <h2 class="text-xl font-semibold text-gray-800">
+            {t("transportDepartment.steps.title")}
           </h2>
-          <ol class="list-decimal pl-6 text-gray-700 leading-relaxed space-y-2 mt-2 text-sm">
-            <li>
-              Identifica el lugar donde ocurrió el remolque y verifica si es
-              zona regulada.
-            </li>
-            <li>
-              Recopila información de la empresa: nombre, número de grúa,
-              operador si es posible.
-            </li>
-            <li>
-              Adjunta fotos o videos si tienes evidencia de que no había
-              señalización o autorización visible.
-            </li>
-            <li>
-              Contacta con el Departamento de Transporte por medio del enlace
-              oficial o por teléfono.
-            </li>
-            <li>
-              Pronto podrás generar aquí una descripción detallada con IA para
-              hacer tu reporte más efectivo.
-            </li>
-          </ol>
-        </div>
-
-        <div class="bg-blue-50 border border-blue-200 rounded-lg p-4 text-blue-800 text-sm">
-          Esta herramienta próximamente te permitirá generar:
-          <ul class="list-disc pl-6 mt-2 space-y-1">
-            <li>Un informe claro de lo sucedido</li>
-            <li>Resumen listo para enviar al Departamento de Transporte</li>
-            <li>
-              Instrucciones personalizadas según tu zona y tipo de remolque
-            </li>
+          <ul class="list-disc pl-6 text-gray-700 leading-relaxed text-sm space-y-1">
+            <For each={steps()}>{(step) => <li>{step}</li>}</For>
           </ul>
         </div>
 
-        <div class="pt-4 border-t border-gray-200 text-sm text-gray-500">
-          *Este reclamo no reemplaza otros procesos legales, pero puede
-          contribuir a sancionar a la compañía.
+        {/* ¿Qué sucede después? */}
+        <div class="space-y-2">
+          <h2 class="text-xl font-semibold text-gray-800">
+            {t("transportDepartment.whatNext.title")}
+          </h2>
+          <p class="text-gray-700 text-sm leading-relaxed">
+            {t("transportDepartment.whatNext.description")}
+          </p>
+        </div>
+
+        {/* Advertencia importante */}
+        <div class="mt-8 bg-yellow-100 border-l-4 border-yellow-500 p-4 rounded-md">
+          <h3 class="text-sm font-semibold text-yellow-800">
+            {t("transportDepartment.warning.title")}
+          </h3>
+          <p class="text-sm text-yellow-700 mt-1">
+            {t("transportDepartment.warning.description")}
+          </p>
+        </div>
+
+        {/* Botón ayuda formulario */}
+        <div class="mt-10 text-center">
+          <h2 class="text-xl font-semibold text-gray-800 mb-4">
+            {t("transportDepartment.aiHelp.title")}
+          </h2>
+          <p class="text-gray-600 text-sm mb-6 max-w-md mx-auto">
+            {t("transportDepartment.aiHelp.description")}
+          </p>
+          <button class="btn-primary">
+            {t("transportDepartment.aiHelp.button")}
+          </button>
+        </div>
+
+        {/* Nota final */}
+        <div class="pt-6 border-t border-gray-200 text-center text-xs text-gray-500">
+          {t("transportDepartment.footer")}
         </div>
       </div>
     </section>
