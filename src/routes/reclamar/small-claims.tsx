@@ -1,7 +1,9 @@
 import { useLanguage } from "../../i18n/LanguageContext";
+import { useNavigate } from "@solidjs/router";
 
 export default function SmallClaims() {
   const { t } = useLanguage();
+  const navigate = useNavigate();
 
   return (
     <section class="flex justify-center px-6 py-12 bg-gray-100 min-h-screen">
@@ -177,7 +179,9 @@ export default function SmallClaims() {
           <p class="text-gray-600 text-sm mb-6 max-w-md mx-auto">
             {t("common.aiAssistant.description")}
           </p>
-          <button class="btn-primary">{t("common.aiAssistant.button")}</button>
+          <button class="btn-primary" onClick={() => navigate("/assistant")}>
+            {t("common.aiAssistant.button")}
+          </button>
         </div>
       </div>
     </section>

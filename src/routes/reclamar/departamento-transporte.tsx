@@ -1,8 +1,10 @@
 import { useLanguage } from "../../i18n/LanguageContext";
 import { For, createMemo } from "solid-js";
+import { useNavigate } from "@solidjs/router";
 
 export default function TransportDepartment() {
   const { t } = useLanguage();
+  const navigate = useNavigate();
   const steps = createMemo(() => {
     const list = t("transportDepartment.steps.list");
     return Array.isArray(list) ? list : [];
@@ -73,7 +75,7 @@ export default function TransportDepartment() {
           <p class="text-gray-600 text-sm mb-6 max-w-md mx-auto">
             {t("transportDepartment.aiHelp.description")}
           </p>
-          <button class="btn-primary">
+          <button class="btn-primary" onClick={() => navigate("/assistant")}>
             {t("transportDepartment.aiHelp.button")}
           </button>
         </div>
