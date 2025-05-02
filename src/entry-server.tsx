@@ -13,6 +13,11 @@ export default createHandler(() => (
               name="viewport"
               content="width=device-width, initial-scale=1"
             />
+            <meta
+              name="description"
+              content="File a complaint against towing companies in Miami-Dade County. Get help with your claim process, legal information, and document generation."
+            />
+            <title>Towing Claim Assistant - Miami-Dade County</title>
             <link rel="icon" href="/favicon.ico" />
             {assets}
           </head>

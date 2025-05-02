@@ -845,6 +845,7 @@ I am requesting full reimbursement for all expenses related to this incident.`);
                   : "bg-gray-200 hover:bg-gray-300 text-gray-700"
               }`}
               onClick={prevStep}
+              aria-label="Previous step"
             >
               Back
             </button>
@@ -852,6 +853,9 @@ I am requesting full reimbursement for all expenses related to this incident.`);
               type="button"
               class="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-all duration-200"
               onClick={currentStep() === 5 ? generarTexto : nextStep}
+              aria-label={
+                currentStep() === 5 ? "Generate document" : "Next step"
+              }
             >
               {currentStep() === 5 ? "Generate Document" : "Next"}
             </button>
