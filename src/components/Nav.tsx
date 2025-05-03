@@ -5,6 +5,7 @@ import { createSignal, onMount, onCleanup } from "solid-js";
 export default function Nav() {
   const { locale, setLocale, t } = useLanguage();
   const [isClaimsOpen, setIsClaimsOpen] = createSignal(false);
+  const [menuOpen, setMenuOpen] = createSignal(false);
   let dropdownRef: HTMLDivElement | undefined;
 
   const toggleLanguage = () => {
@@ -15,6 +16,8 @@ export default function Nav() {
     e.preventDefault();
     setIsClaimsOpen(!isClaimsOpen());
   };
+
+  const toggleMenu = () => setMenuOpen(!menuOpen());
 
   // Handle click outside
   onMount(() => {
@@ -36,7 +39,20 @@ export default function Nav() {
         <div class="flex items-center justify-between h-16">
           <div class="flex items-center">
             <div class="flex-shrink-0">
-              <A href="/" class="text-white text-xl font-bold">
+              <button
+                onClick={toggleMenu}
+                class="text-white p-2 md:hidden focus:outline-none"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path d="M21 12h-2.756l-1.72-3.44a1 1 0 00-.894-.56H7.37L6.294 5.3A.997.997 0 005.281 5H3c-.552 0-1 .447-1 1v12c0 .553.448 1 1 1h1c0 1.103.897 2 2 2s2-.897 2-2h8c0 1.103.897 2 2 2s2-.897 2-2h1c.552 0 1-.447 1-1v-3c0-1.103-.897-2-2-2zM6 18c-.552 0-1-.447-1-1s.448-1 1-1 1 .447 1 1-.448 1-1 1zm12 0c-.552 0-1-.447-1-1s.448-1 1-1 1 .447 1 1-.448 1-1 1zM4 8h1.382l1.38 2.76c.046.092.133.156.236.18l10.248 2.374L17.714 12H16a1 1 0 100 2h1v3h-1a1 1 0 100 2h1v1H8v-1h1a1 1 0 100-2H8v-3h1a1 1 0 100-2H7.382l-2.497-2.497L4 8z" />
+                </svg>
+              </button>
+              <A href="/" class="text-white text-xl font-bold hidden md:block">
                 {t("home.title")}
               </A>
             </div>
@@ -141,6 +157,65 @@ export default function Nav() {
           </div>
         </div>
       </div>
+      {menuOpen() && (
+        <div class="md:hidden bg-gradient-to-r from-blue-600 to-blue-800 px-2 pt-2 pb-3 space-y-1">
+          <A
+            href="/"
+            class="block text-white hover:bg-blue-700 hover:bg-opacity-75 px-3 py-2 rounded-md text-base font-medium"
+          >
+            {t("nav.home")}
+          </A>
+          <A
+            href="/my-case"
+            class="block text-white hover:bg-blue-700 hover:bg-opacity-75 px-3 py-2 rounded-md text-base font-medium"
+          >
+            {t("nav.myCase")}
+          </A>
+          <A
+            href="/reclamar/small-claims"
+            class="block text-white hover:bg-blue-700 hover:bg-opacity-75 px-3 py-2 rounded-md text-base font-medium"
+          >
+            {t("nav.claims.smallClaims")}
+          </A>
+          <A
+            href="/reclamar/consumer-services"
+            class="block text-white hover:bg-blue-700 hover:bg-opacity-75 px-3 py-2 rounded-md text-base font-medium"
+          >
+            {t("nav.claims.consumerServices")}
+          </A>
+          <A
+            href="/reclamar/departamento-transporte"
+            class="block text-white hover:bg-blue-700 hover:bg-opacity-75 px-3 py-2 rounded-md text-base font-medium"
+          >
+            {t("nav.claims.transport")}
+          </A>
+          <A
+            href="/info-legal"
+            class="block text-white hover:bg-blue-700 hover:bg-opacity-75 px-3 py-2 rounded-md text-base font-medium"
+          >
+            {t("nav.legalInfo")}
+          </A>
+          <A
+            href="/report"
+            class="block text-white hover:bg-blue-700 hover:bg-opacity-75 px-3 py-2 rounded-md text-base font-medium"
+          >
+            {t("nav.reports")}
+          </A>
+          <A
+            href="/assistant"
+            class="block text-white hover:bg-blue-700 hover:bg-opacity-75 px-3 py-2 rounded-md text-base font-medium"
+          >
+            {t("nav.assistant")}
+          </A>
+          <button
+            onClick={toggleLanguage}
+            class="block w-full text-left text-white hover:bg-blue-700 hover:bg-opacity-75 px-3 py-2 rounded-md text-base font-medium"
+          >
+            {t("common.language")} :{" "}
+            {locale() === "es" ? t("common.spanish") : t("common.english")}
+          </button>
+        </div>
+      )}
     </nav>
   );
 }
