@@ -7,15 +7,11 @@ export default function Report() {
     <section class="flex justify-center px-6 py-12 bg-gray-100 min-h-screen">
       <div class="bg-white shadow-md rounded-2xl max-w-3xl w-full p-8 space-y-8 animate-fade-in">
         {/* Título principal */}
-        <h1 class="text-2xl font-bold text-blue-700">
-          Casos Reales de Reclamos contra Grúas
-        </h1>
+        <h1 class="text-2xl font-bold text-blue-700">{t("reports.title")}</h1>
 
         {/* Introducción */}
         <p class="text-gray-700 text-sm leading-relaxed">
-          Aquí recopilamos experiencias reales de consumidores que han
-          enfrentado abusos o prácticas irregulares de compañías de grúas,
-          principalmente en el área de Miami-Dade, Florida.
+          {t("reports.intro")}
         </p>
 
         {/* Testimonios */}
@@ -25,9 +21,9 @@ export default function Report() {
               Cobro Excesivo y Falta de Recibo
             </h2>
             <p class="text-gray-700 text-sm mt-2">
-              “Me remolcaron el coche en South Beach. Pagué 280 dólares para
+              "Me remolcaron el coche en South Beach. Pagué 280 dólares para
               liberarlo. Me dijeron que pagara en efectivo y no me dieron recibo
-              porque, según ellos, el precio reducido no incluía recibo.”
+              porque, según ellos, el precio reducido no incluía recibo."
             </p>
             <p class="text-xs text-gray-500 mt-1">
               Fuente: Reddit –{" "}
@@ -46,9 +42,9 @@ export default function Report() {
               Remolque sin Señalización Adecuada
             </h2>
             <p class="text-gray-700 text-sm mt-2">
-              “Mi carro fue remolcado desde un estacionamiento que no tenía
+              "Mi carro fue remolcado desde un estacionamiento que no tenía
               ninguna señal visible advirtiendo sobre el remolque. Tomé fotos
-              como evidencia.”
+              como evidencia."
             </p>
             <p class="text-xs text-gray-500 mt-1">
               Fuente: Reddit –{" "}
@@ -67,9 +63,9 @@ export default function Report() {
               Tarifas Ocultas y Horarios Irregulares
             </h2>
             <p class="text-gray-700 text-sm mt-2">
-              “La empresa Midtown Towing se negó a informarme las tarifas cuando
+              "La empresa Midtown Towing se negó a informarme las tarifas cuando
               llamé y cerró antes del horario legal permitido, dificultando la
-              recuperación de mi vehículo.”
+              recuperación de mi vehículo."
             </p>
             <p class="text-xs text-gray-500 mt-1">
               Fuente: Reddit –{" "}
@@ -88,9 +84,9 @@ export default function Report() {
               Falta de Regulación Efectiva
             </h2>
             <p class="text-gray-700 text-sm mt-2">
-              “Las compañías de grúas hacen lo que quieren en Miami-Dade. No hay
+              "Las compañías de grúas hacen lo que quieren en Miami-Dade. No hay
               verdadera regulación ni consecuencias. Los consumidores quedan
-              totalmente desprotegidos.”
+              totalmente desprotegidos."
             </p>
             <p class="text-xs text-gray-500 mt-1">
               Fuente: Reddit –{" "}

@@ -172,10 +172,7 @@ export default function Nav() {
           </div>
           <div class="flex items-center">
             <button
-              onClick={() => {
-                toggleLanguage();
-                toggleMenu();
-              }}
+              onClick={toggleLanguage}
               class="text-white hover:bg-blue-700 hover:bg-opacity-75 px-3 py-2 rounded-md text-sm font-medium transition-all duration-200"
             >
               {t("common.language")}:{" "}
@@ -188,72 +185,56 @@ export default function Nav() {
         <div class="md:hidden bg-gradient-to-r from-blue-600 to-blue-800 px-2 pt-2 pb-3 space-y-1">
           <A
             href="/"
-            onClick={() => {
-              toggleMenu();
-            }}
+            onClick={() => toggleMenu()}
             class="block text-white hover:bg-blue-700 hover:bg-opacity-75 px-3 py-2 rounded-md text-base font-medium"
           >
             {t("nav.home")}
           </A>
           <A
             href="/my-case"
-            onClick={() => {
-              toggleMenu();
-            }}
+            onClick={() => toggleMenu()}
             class="block text-white hover:bg-blue-700 hover:bg-opacity-75 px-3 py-2 rounded-md text-base font-medium"
           >
             {t("nav.myCase")}
           </A>
           <A
             href="/reclamar/small-claims"
-            onClick={() => {
-              toggleMenu();
-            }}
+            onClick={() => toggleMenu()}
             class="block text-white hover:bg-blue-700 hover:bg-opacity-75 px-3 py-2 rounded-md text-base font-medium"
           >
             {t("nav.claims.smallClaims")}
           </A>
           <A
             href="/reclamar/consumer-services"
-            onClick={() => {
-              toggleMenu();
-            }}
+            onClick={() => toggleMenu()}
             class="block text-white hover:bg-blue-700 hover:bg-opacity-75 px-3 py-2 rounded-md text-base font-medium"
           >
             {t("nav.claims.consumerServices")}
           </A>
           <A
             href="/reclamar/departamento-transporte"
-            onClick={() => {
-              toggleMenu();
-            }}
+            onClick={() => toggleMenu()}
             class="block text-white hover:bg-blue-700 hover:bg-opacity-75 px-3 py-2 rounded-md text-base font-medium"
           >
             {t("nav.claims.transport")}
           </A>
           <A
             href="/info-legal"
-            onClick={() => {
-              toggleMenu();
-            }}
+            onClick={() => toggleMenu()}
             class="block text-white hover:bg-blue-700 hover:bg-opacity-75 px-3 py-2 rounded-md text-base font-medium"
           >
             {t("nav.legalInfo")}
           </A>
           <A
             href="/report"
-            onClick={() => {
-              toggleMenu();
-            }}
+            onClick={() => toggleMenu()}
             class="block text-white hover:bg-blue-700 hover:bg-opacity-75 px-3 py-2 rounded-md text-base font-medium"
           >
             {t("nav.reports")}
           </A>
           <A
             href="/assistant"
-            onClick={() => {
-              toggleMenu();
-            }}
+            onClick={() => toggleMenu()}
             class="block text-white hover:bg-blue-700 hover:bg-opacity-75 px-3 py-2 rounded-md text-base font-medium"
           >
             {t("nav.assistant")}

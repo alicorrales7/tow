@@ -143,6 +143,7 @@ export const translations = {
     },
     reports: {
       title: "Reports",
+      intro: "Here we collect real consumer experiences of abuses or irregular practices by towing companies, mainly in the Miami-Dade, Florida area.",
       newReport: "New Report",
       history: "Report History",
       status: "Report Status",
@@ -447,6 +448,7 @@ export const translations = {
     },
     reports: {
       title: "Reportes",
+      intro: "Aquí recopilamos experiencias reales de consumidores que han enfrentado abusos o prácticas irregulares de compañías de grúas, principalmente en el área de Miami-Dade, Florida.",
       newReport: "Nuevo Reporte",
       history: "Historial de Reportes",
       status: "Estado del Reporte",
